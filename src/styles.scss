@@ -1,0 +1,87 @@
+$column-width: 480px;
+$gutter-width: 20px;
+
+.app {
+  margin: auto;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight: 300;
+  text-align: center;
+}
+
+.section {
+  display: inline-block;
+  max-width: $column-width;
+  margin: $gutter-width;
+  text-align: left;
+  vertical-align: top;
+}
+
+.player-wrapper {
+  width: 480px;
+  height: 270px;
+}
+
+.react-player {
+  margin-bottom: 10px;
+  background: rgba(0, 0, 0, .1);
+}
+
+.faded {
+  color: rgba(0, 0, 0, .5);
+}
+
+.footer {
+  margin: $gutter-width;
+}
+
+.lyrics {
+  position: relative;
+  font-size: 1.5rem;
+  color: #eee;
+}
+
+// .selected {
+//   position: relative;
+// }
+
+.selected {
+    display: none;
+    top: -1.8px;
+    left: 0;
+    position: absolute;
+    color: red;
+    width: 0;
+    overflow: hidden;
+    white-space: nowrap;
+    animation-name: mymove;
+    animation-timing-function: linear;
+    animation-duration: 8s;
+    animation-delay: 0.0s;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+    animation-fill-mode: forwards;
+    // animation: mymove 8s forwards;
+	
+}
+
+// .selected::before {
+// 	content: attr(data-text);
+//     position: absolute;
+//     color: red;
+//     width: 100%;
+//     overflow: hidden;
+//     white-space: nowrap;
+//     animation-name: mymove;
+//     animation-timing-function: linear;
+//     animation-duration: 8s;
+//     animation-delay: 0.0s;
+//     animation-iteration-count: 1;
+//     animation-direction: normal;
+//     animation-fill-mode: forwards;
+//     // animation: mymove 8s forwards;
+	
+// }
+@keyframes mymove {
+  from {width: 0}
+  to {width: 100%}
+}
